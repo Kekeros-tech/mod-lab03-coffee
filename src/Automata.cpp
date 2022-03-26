@@ -33,19 +33,19 @@ Automata::Automata() {
     void Automata::printInfoAboutState() {
         switch (stateOfAutomata) {
         case OFF:
-            cout << "Automata is off";
+            cout << "Automata is off" << endl;
             break;
         case WAIT:
-            cout << "Automata is ready to take order";
+            cout << "Automata is ready to take order" << endl;
             break;
         case ACCEPT:
-            cout << "Replenish the balance and select the menu item";
+            cout << "Replenish the balance and select the menu item" << endl;
             break;
         case CHEAK:
-            cout << "Financial check";
+            cout << "Financial check" << endl;
             break;
         case COOK:
-            cout << "The machine starts cooking";
+            cout << "The machine starts cooking" << endl;
             break;
         default:
             break;
@@ -93,8 +93,9 @@ Automata::Automata() {
 
     void Automata::check() {
         if (stateOfAutomata == CHEAK) {
+            cout <<"---"<< cash << endl;
             if (cash >= prices[positionOfCheak]) {
-                stateOfAutomata == COOK;
+                stateOfAutomata = COOK;
             } else {
                 cout << "Not enough" <<endl;
                 positionOfCheak = -1;
