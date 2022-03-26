@@ -1,40 +1,41 @@
+// Copyright 2022 UNN-IASR
 #pragma once
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::cout;
 
-int MENU_DIMENSION = 7;
+const int MENU_DIMENSION = 7;
 
 enum STATES {
-	OFF,
-	WAIT,
-	ACCEPT,
-	CHEAK,
-	COOK
+    OFF,
+    WAIT,
+    ACCEPT,
+    CHEAK,
+    COOK
 };
 
 class Automata
 {
 private:
-	STATES stateOfAutomata;
-	double cash;
-	const string menu[MENU_DIMENSION];
-	const int prices[MENU_DIMENSION];
-	int positionOfCheak;
+    STATES stateOfAutomata;
+    double cash;
+    const string menu[MENU_DIMENSION];
+    const int prices[MENU_DIMENSION];
+    int positionOfCheak;
 
 public:
-	Automata();
-	void on();
-	void off();
-	void coin(double);
-	void getMenu();
-	STATES getState();
-	double getCash();
-	void printInfoAboutState();
-	void choice(int);
-	void check();
-	int cancel();
-	void cook();
-	void finish();
+    Automata();
+    void on();
+    void off();
+    void coin(double);
+    void getMenu();
+    STATES getState();
+    double getCash();
+    void printInfoAboutState();
+    void choice(int);
+    void check();
+    int cancel();
+    void cook();
+    void finish();
 };
