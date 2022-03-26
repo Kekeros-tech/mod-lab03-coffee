@@ -95,23 +95,24 @@ Automata::Automata() {
         if (stateOfAutomata == CHEAK) {
             if (cash >= prices[positionOfCheak]) {
                 stateOfAutomata == COOK;
-                printInfoAboutState();
             } else {
                 cout << "Not enough" <<endl;
-                cancel();
+                positionOfCheak = -1;
+                stateOfAutomata = WAIT;
             }
         }
+        printInfoAboutState();
     }
 
     int Automata::cancel() {
         if (stateOfAutomata == ACCEPT || stateOfAutomata == CHEAK) {
             positionOfCheak = -1;
             stateOfAutomata = WAIT;
-            double buffer = cash;
+            double change = cash;
             cash = 0;
-            return cash;
+            printInfoAboutState();
+            return change;
         }
-        printInfoAboutState();
     }
 
     void Automata::cook() {
