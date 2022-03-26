@@ -4,6 +4,8 @@
 #include <string>
 
 using std::cout;
+using std::string;
+using std::endl;
 
 Automata::Automata() {
     stateOfAutomata = OFF;
@@ -96,7 +98,7 @@ Automata::Automata() {
                 printInfoAboutState();
             } else {
                 cout << "Not enough" <<endl;
-                canñel();
+                cancel();
             }
         }
     }
@@ -126,4 +128,4 @@ Automata::Automata() {
             stateOfAutomata = WAIT;
         }
         printInfoAboutState();
-    };
+    }

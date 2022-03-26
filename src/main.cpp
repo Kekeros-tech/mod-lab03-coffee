@@ -3,8 +3,7 @@
 #include <string>
 #include "Automata.h"
 
-int main()
-{
+int main() {
     Automata automata = new Automata();
     automata.on();
     automata.coin(140);

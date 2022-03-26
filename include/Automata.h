@@ -4,6 +4,7 @@
 #include <string>
 
 using std::cout;
+using std::string;
 
 const int MENU_DIMENSION = 7;
 
@@ -15,16 +16,17 @@ enum STATES {
     COOK
 };
 
-class Automata
-{
+class Automata {
 private:
+
     STATES stateOfAutomata;
     double cash;
-    const string menu[MENU_DIMENSION];
-    const int prices[MENU_DIMENSION];
+    string menu[MENU_DIMENSION];
+    int prices[MENU_DIMENSION];
     int positionOfCheak;
 
 public:
+
     Automata();
     void on();
     void off();
