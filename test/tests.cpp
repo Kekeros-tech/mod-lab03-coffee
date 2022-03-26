@@ -69,5 +69,6 @@ TEST(TEST8, TrueOrFalse) {
     automata.check();
     automata.cook();
     automata.finish();
-    EXPECT_EQ(STATES::WAIT, automata.getState());
+    automata.off();
+    EXPECT_EQ(STATES::OFF, automata.getState());
 }
