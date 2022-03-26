@@ -2,9 +2,11 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <array>
 
 using std::cout;
 using std::string;
+using std::array;
 
 const int MENU_DIMENSION = 7;
 
@@ -17,16 +19,14 @@ enum STATES {
 };
 
 class Automata {
-private:
-
+ private:
     STATES stateOfAutomata;
     double cash;
-    string menu[MENU_DIMENSION];
-    int prices[MENU_DIMENSION];
+    array<string, MENU_DIMENSION> menu;
+    array<int, MENU_DIMENSION> prices;
     int positionOfCheak;
 
-public:
-
+ public:
     Automata();
     void on();
     void off();

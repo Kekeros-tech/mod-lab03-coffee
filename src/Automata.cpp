@@ -107,7 +107,9 @@ Automata::Automata() {
         if (stateOfAutomata == ACCEPT || stateOfAutomata == CHEAK) {
             positionOfCheak = -1;
             stateOfAutomata = WAIT;
+            double buffer = cash;
             cash = 0;
+            return cash;
         }
         printInfoAboutState();
     }
