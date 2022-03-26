@@ -113,6 +113,7 @@ Automata::Automata() {
             printInfoAboutState();
             return change;
         }
+        return -1;
     }
 
     void Automata::cook() {
