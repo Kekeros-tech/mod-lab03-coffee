@@ -4,7 +4,7 @@
 #include "Automata.h"
 
 int main() {
-    Automata automata = new Automata();
+    Automata automata;
     automata.on();
     automata.coin(140);
     automata.choice(3);
